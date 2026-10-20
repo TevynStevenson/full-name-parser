@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 //Import Scanner
+
 import java.util.Scanner;
 
 public class FullNameParserApp {
@@ -17,13 +18,19 @@ public class FullNameParserApp {
         //Split the fullname into separate parts based on the spaces
         String[] nameParts = fullName.split(" ");
 
-        System.out.println("First Name:"+ " " + nameParts[0]);
-        System.out.println("Middle Name:" + " " + nameParts[1]);
-        System.out.println("Last Name:" + " " +nameParts[2]);
+        // Add if statement
+
+        if (nameParts.length == 3) {
+            System.out.println("First Name:" + " " + nameParts[0]);
+            System.out.println("Middle Name:" + " " + nameParts[1]);
+            System.out.println("Last Name:" + " " + nameParts[2]);
+        }
+        if (nameParts.length == 2) {
+            System.out.println("First Name:" + " " + nameParts[0]);
+            System.out.println("Middle Name:" + " " + ("None"));
+            System.out.println("Last Name:" + " " + nameParts[1]);
+        }
 
 
-
-
-
+        }
     }
-}
